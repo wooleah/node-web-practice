@@ -51,6 +51,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('portfolio',{
+    pageTitle: 'My portfolio',
+    welcomeMessage: 'Thank you'
+  });
+});
+
 //
 // app.get('/bad', (req, res) => {
 //   res.send({
