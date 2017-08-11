@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 var app = express();
 //middleware let's us configure how this express app works
 //express.static takes absolute path
@@ -58,6 +59,6 @@ app.get('/about', (req, res) => {
 // });
 
 //bind the app to the port of this machine
-app.listen(3000, () => {
-  console.log('Server is up on port 3000');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
